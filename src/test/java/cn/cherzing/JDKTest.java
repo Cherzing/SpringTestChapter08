@@ -17,7 +17,6 @@ public class JDKTest {
     public void testJDK(){
         MyProxy myProxy = new MyProxy();
         UserDaoImpl userDao = new UserDaoImpl();
-
         UserDao proxy = (UserDao)myProxy.createProxy(userDao);
         proxy.addUser();
         System.out.println();
